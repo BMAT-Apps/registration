@@ -209,6 +209,8 @@ class HelpWindow(QWidget):
 
         # Setup QTextBrowser to display the HTML content
         self.text_browser = QTextBrowser()
+        base_path = os.path.dirname(os.path.abspath(markdown_file))
+        self.text_browser.setSearchPaths([base_path])
         self.text_browser.setHtml(html_content)
 
         layout = QVBoxLayout()
@@ -433,7 +435,7 @@ class RegistrationTab(QWidget):
         if deriv:
             args.extend(['--derivative', deriv])
         if name_reg:
-            args.extend(['-reg-name', name_reg])
+            args.extend(['--reg-name', name_reg])
         
         if self.local:
             use_docker = self.parent.add_info.get('use_docker')

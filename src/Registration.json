@@ -3,5 +3,5 @@
 	"source_code": "Registration.py",
 	"import_name": "Registration",
 	"attr": "Registration",
-	"add_info":{"use_docker":false, "sss_slurm_no":"Registration_sss.json"}
+	"add_info":{"use_docker":false, "sss_slurm":"Registration_sss.json"}
 }
